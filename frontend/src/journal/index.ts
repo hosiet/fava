@@ -60,7 +60,7 @@ function handleClick({ target }: Event): void {
       // Entry metadata.
       addFilter(expr);
     }
-  } else if (target.closest(".indicators")) {
+  } else if (target.closest(".indicators") || target.closest(".description.droptarget")) {
     // Toggle postings and metadata by clicking on indicators.
     const entry = target.closest(".journal > li");
     if (entry) {
